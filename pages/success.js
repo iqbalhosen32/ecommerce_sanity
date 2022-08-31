@@ -6,7 +6,7 @@ import { UseStateContext } from '../context/StateContext';
 import { runFireworks } from '../lib/utils';
 
 
-const success = () => {
+const Success = () => {
     const {setCartItems, setTotalPrice, setTotalQuantities} = UseStateContext();
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const success = () => {
         setTotalPrice(0);
         setTotalQuantities(0);
         runFireworks()
-    }, [setCartItems, setTotalPrice, setTotalQuantities])
+    }, [])
   return (
     <div className='success-wrapper'>
         <div className='success'>
@@ -38,4 +38,4 @@ const success = () => {
   )
 }
 
-export default success
+export default Success;
