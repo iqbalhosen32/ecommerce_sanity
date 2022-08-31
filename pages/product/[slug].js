@@ -4,7 +4,7 @@ import { client, urlFor } from '../../lib/client';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import Product from './../../components/Product';
 
-import { useStateContext } from '../../context/StateContext';
+import { UseStateContext } from '../../context/StateContext';
 
 
 const ProductDetais = ({ product, products }) => {
@@ -12,7 +12,7 @@ const ProductDetais = ({ product, products }) => {
 
     const [index, setIndex] = useState(0);
 
-    const { incQty, decQty, qty, onAdd, setShowCart } = useStateContext();
+    const { incQty, decQty, qty, onAdd, setShowCart } = UseStateContext();
 
     const handleBuyNow = () => {
         onAdd(product, qty)
