@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
@@ -23,8 +24,8 @@ const Cart = () => {
       body: JSON.stringify(cartItems),
     });
 
-    if(response.statusCode === 500) return;
-    
+    if (response.statusCode === 500) return;
+
     const data = await response.json();
 
 
@@ -32,7 +33,7 @@ const Cart = () => {
 
     stripe.redirectToCheckout({ sessionId: data.id });
   }
-  return ( 
+  return (
     <div className='cart-wrapper' ref={cartRef}>
       <div className='cart-container'>
         <button
@@ -68,7 +69,9 @@ const Cart = () => {
             cartItems.length >= 1 && cartItems.map((item) => (
               <div className='product' key={item._id}>
 
-                <img src={urlFor(item?.image[0])} alt={item?.name} className='cart-product-image' />
+                <picture>
+                  <img src={urlFor(item?.image[0])} alt={item?.name} className='cart-product-image'></img>
+                </picture>
                 <div className='item-desc'>
                   <div className='flex top'>
                     <h5>{item.name}</h5>
@@ -76,11 +79,11 @@ const Cart = () => {
                   </div>
                   <div className='flex bottom'>
                     <div>
-                    <p className='quantity-desc'>
-                            <span className='minus' onClick={() => toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus /></span>
-                            <span className='num'>{item.quantity}</span>
-                            <span className='plus' onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus /></span>
-                        </p>
+                      <p className='quantity-desc'>
+                        <span className='minus' onClick={() => toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus /></span>
+                        <span className='num'>{item.quantity}</span>
+                        <span className='plus' onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus /></span>
+                      </p>
                     </div>
                     <button
                       type='button'
