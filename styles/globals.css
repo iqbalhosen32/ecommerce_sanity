@@ -908,8 +908,6 @@ span.text-red {
   }
   .hero-banner-container button {
     margin-top: 60px;
-    /* font-size: 12px; */
-    /* z-index: 10000; */
   }
 }
 
@@ -933,13 +931,9 @@ span.text-red {
 
   .footer-banner-container {
     height: 420px;
-    /* margin-top: 80px; */
-
     padding: 20px 40px;
-    /* background-color: #dcdcdc; */
     border-radius: 15px;
     position: relative;
-    /* height: 450px; */
   }
 
   .footer-banner-image {

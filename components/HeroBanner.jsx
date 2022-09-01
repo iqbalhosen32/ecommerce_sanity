@@ -14,7 +14,7 @@ const HeroBanner = ({ heroBanner }) => {
 
         </picture>
         <div>
-          <Link href={`/product/${heroBanner.product}`}>
+          <Link href="/">
             <button type='button'>{heroBanner.buttonText}</button>
           </Link>
         </div>
