@@ -305,20 +305,20 @@ span.text-red {
 }
 
 .cart-wrapper {
-  width: 100vw;
+  width: 200vw;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   right: 0;
   top: 0;
   z-index: 100;
-  /* will-change: transform; */
+  will-change: transform;
   transition: all 1s ease-in-out;
 
 }
 
 .cart-container {
   height: 100vh;
-  width: 600px;
+  width: 650px;
   background-color: white;
   float: right;
   padding: 40px 10px;
@@ -386,6 +386,7 @@ span.text-red {
   overflow: auto;
   max-height: 70vh;
   padding: 20px 10px;
+  margin-bottom: 10%;
 }
 
 .product {
@@ -445,7 +446,8 @@ span.text-red {
   right: 5px;
   width: 98%;
   padding: 30px 35px;
-  background-color: #fff
+  background-color: #fff;
+  margin-top: 10px;
 }
 
 .btn-container {
@@ -963,7 +965,6 @@ span.text-red {
   .cart-container {
     width: 350px;
     padding: 4px;
-    /* height: 150%; */
   }
 
   .product-container {
