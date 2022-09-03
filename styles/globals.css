@@ -957,13 +957,13 @@ span.text-red {
   }
 
   .cart-wrapper {
-    height: 422px;
+    height: 100vh;
   }
 
   .cart-container {
     width: 350px;
     padding: 4px;
-    height: 150%;
+    /* height: 150%; */
   }
 
   .product-container {
