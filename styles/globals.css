@@ -282,10 +282,8 @@ span.text-red {
 
 .footer-banner-image {
   position: absolute;
-  /* top: -35%;
-  left: 8%; */
   top: -25%;
-  left: 25%;
+  left: 50%;
 }
 
 .banner-desc .right {
@@ -445,9 +443,9 @@ span.text-red {
   position: absolute;
   bottom: 12px;
   right: 5px;
-  width: 100%;
-  padding: 30px 65px;
-
+  width: 98%;
+  padding: 30px 35px;
+  background-color: #fff
 }
 
 .btn-container {
@@ -727,15 +725,15 @@ span.text-red {
   }
 
   .footer-banner-container {
-    height: 560px;
+    height: 400px;
     margin-top: 80px;
   }
 
   .footer-banner-image {
-    width: 77%;
-    left: 30%;
+    width: 45%;
+    left: 50%;
     top: 6%;
-    height: 56%
+    height: 76%
   }
 
   .banner-desc .left h3 {
@@ -810,12 +808,13 @@ span.text-red {
 
   .product {
     padding: 20px 5px;
+    margin-bottom: 10%;
 
   }
 
   .product .cart-product-image {
-    width: 25%;
-    height: 25%;
+    width: 85%;
+    height: 100%;
   }
 
   .buttons .add-to-cart {
@@ -856,7 +855,8 @@ span.text-red {
   }
 
   .cart-bottom {
-    padding: 30px;
+    padding: 10px;
+    margin-top: 10px;
   }
 
   .total h3 {
@@ -906,8 +906,21 @@ span.text-red {
   .hero-banner-container {
     height: 480px;
   }
+
   .hero-banner-container button {
     margin-top: 60px;
+  }
+
+  .footer-banner-container {
+    height: 50%;
+    margin-top: 80px;
+  }
+
+  .footer-banner-image {
+    width: 55%;
+    left: 40%;
+    top: 6%;
+    height: 45%
   }
 }
 
@@ -940,7 +953,22 @@ span.text-red {
     width: 60%;
     left: 40%;
     top: 6%;
-    height: 40%
+    height: 45%
+  }
+
+  .cart-wrapper {
+    height: 422px;
+  }
+
+  .cart-container {
+    width: 350px;
+    padding: 4px;
+    height: 150%;
+  }
+
+  .product-container {
+    margin-bottom: 100px;
+    height: 100%;
   }
 
   .banner-desc .left h3 {
@@ -998,31 +1026,21 @@ span.text-red {
   }
 
   .product-detail-container .product-detail-image {
-    width: 350px;
-    height: 350px;
-  }
-
-  .cart-container {
-    width: 415px;
-    padding: 4px;
+    width: 300px;
+    height: 300px;
   }
 
   .cart-heading {
     margin-top: 35px;
   }
 
-  .product-container {
-    margin-top: 10px;
-  }
-
   .product {
     padding: 20px 5px;
-
   }
 
   .product .cart-product-image {
-    width: 25%;
-    height: 25%;
+    width: 90%;
+    height: 80%;
   }
 
   .buttons .add-to-cart {
