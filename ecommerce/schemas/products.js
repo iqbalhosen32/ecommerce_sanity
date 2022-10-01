@@ -29,10 +29,20 @@ export default {
             }
         },
         {
-            name: 'price',
-            title: 'Price',
+            name: 'oldPrice',
+            title: 'Old Price',
             type: 'number'
         },
+        {
+            name: 'newPrice',
+            title: 'New Price',
+            type: 'number'
+        },
+        // {
+        //     name: 'discount',
+        //     title: 'Discount',
+        //     type: 'string'
+        // },
         {
             name: 'details',
             title: 'Details',

@@ -8,7 +8,7 @@ import { UseStateContext } from '../../context/StateContext';
 
 
 const ProductDetais = ({ product, products }) => {
-    const { image, name, details, price } = product;
+    const { image, name, details, newPrice, oldPrice } = product;
 
     const [index, setIndex] = useState(0);
 
@@ -40,38 +40,46 @@ const ProductDetais = ({ product, products }) => {
                         }
                     </div>
                 </div>
-                <div className="product-detail-desc">
-                    <h1>{name}</h1>
-                    <div className="reviews">
-                        <div>
-                            <AiFillStar />
-                            <AiFillStar />
-                            <AiFillStar />
-                            <AiFillStar />
-                            <AiOutlineStar />
+                <div className="product-detail">
+                    <div className="product-detail-desc">
+                        <h1>{name}</h1>
+                        <div className="reviews">
+                            <div>
+                                <AiFillStar />
+                                <AiFillStar />
+                                <AiFillStar />
+                                <AiFillStar />
+                                <AiOutlineStar />
+                            </div>
+                            <p>
+                                (20)
+                            </p>
                         </div>
-                        <p>
-                            (20)
-                        </p>
-                    </div>
-                    <h4>Details: </h4>
-                    <p>{details}</p>
-                    <p className='price'>${price}</p>
-                    <div className='quantity'>
-                        <h3>Quantity:</h3>
-                        <p className='quantity-desc'>
-                            <span className='minus' onClick={decQty}><AiOutlineMinus /></span>
-                            <span className='num'>{qty}</span>
-                            <span className='plus' onClick={incQty}><AiOutlinePlus /></span>
-                        </p>
-                    </div>
-                    <div className='buttons'>
-                        <button type='button' onClick={() => onAdd(product, qty)} className='add-to-cart'>
-                            Add To Cart
-                        </button>
-                        <button type='button' onClick={handleBuyNow} className='buy-now'>
-                            Buy Now
-                        </button>
+                        <h4>Details: </h4>
+                        <p>{details}</p>
+                        <div className='product-price'>
+
+                            <p className='product-price-new price'>${newPrice}</p>
+                            {
+                                oldPrice && <p className='product-price-old price'>${oldPrice}</p>
+                            }
+                        </div>
+                        <div className='quantity'>
+                            <h3>Quantity:</h3>
+                            <p className='quantity-desc'>
+                                <span className='minus' onClick={decQty}><AiOutlineMinus /></span>
+                                <span className='num'>{qty}</span>
+                                <span className='plus' onClick={incQty}><AiOutlinePlus /></span>
+                            </p>
+                        </div>
+                        <div className='buttons'>
+                            <button type='button' onClick={() => onAdd(product, qty)} className='add-to-cart'>
+                                Add To Cart
+                            </button>
+                            <button type='button' onClick={handleBuyNow} className='buy-now'>
+                                Buy Now
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
