@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, {useState} from 'react'
 import { urlFor } from '../lib/client'
 
-const FooterBanner = ({ footerBanner: { image, desc, discount, largeText1, largeText2, saleTime, smallText, midText, buttonText, product, } }) => {
+const FooterBanner = ({ footerBanner: { slug, image, desc, discount, largeText1, largeText2, saleTime, smallText, midText, buttonText, product, } }) => {
   const [index, setIndex] = useState(0);
   return (
     <div className='footer-banner-container'>
@@ -17,9 +17,11 @@ const FooterBanner = ({ footerBanner: { image, desc, discount, largeText1, large
           <p>{smallText}</p>
           <h3>{midText}</h3>
           <p>{desc}</p>
-          <Link href={`/product/${product}`}>
+          <div>
+          <Link href={`/product/${slug.current}`}>
             <button type='button'>{buttonText}</button>
           </Link>
+        </div>
         </div>
         <picture>
           {/* <img src={urlFor(image)} alt={product} className='footer-banner-image' /> */}

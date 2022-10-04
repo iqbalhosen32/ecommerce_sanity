@@ -25,7 +25,7 @@ export default async function handler(req, res) {
                 name: item.name,
                 images: [newImage],
               },
-              unit_amount: item.price * 100,
+              unit_amount: item.newPrice * 100,
             },
             adjustable_quantity: {
               enabled:true,
