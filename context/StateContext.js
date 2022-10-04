@@ -9,6 +9,7 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  console.log(cartItems)
 
   let foundProduct;
   let index;
@@ -26,9 +27,10 @@ export const StateContext = ({ children }) => {
   }
 
   const onAdd = (product, quantity) => {
+    // console.log(cartItems)
     const checkProductInCart = cartItems.find((item) => item._id === product._id);
 
-    setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
+    setTotalPrice((prevTotalPrice) => prevTotalPrice + product.newPrice * quantity);
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
 
     if (checkProductInCart) {
@@ -55,7 +57,7 @@ export const StateContext = ({ children }) => {
     foundProduct = cartItems.find((item) => item._id === product._id);
     const newCartItems = cartItems.filter((item) => item._id !== product._id);
 
-    setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
+    setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.newPrice * foundProduct.quantity);
     setTotalQuantities(prevTotalQuantities => prevTotalQuantities - foundProduct.quantity);
 
     setCartItems(newCartItems);
@@ -69,12 +71,12 @@ export const StateContext = ({ children }) => {
 
     if (value === 'inc') {
       setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity + 1 }]);
-      setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+      setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.newPrice);
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
     } else if (value = 'dec') {
       if(foundProduct.quantity > 1) {
         setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity - 1 }]);
-        setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+        setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.newPrice);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
 
       }

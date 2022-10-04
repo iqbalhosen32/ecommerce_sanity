@@ -3,7 +3,6 @@ import React from 'react'
 import { urlFor } from '../lib/client'
 
 const Product = ({ product: { name, oldPrice, newPrice, slug, image } }) => {
-  console.log(oldPrice)
   return (
     <div>
       <Link href={`/product/${slug.current}`}>

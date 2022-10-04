@@ -38,11 +38,6 @@ export default {
             title: 'New Price',
             type: 'number'
         },
-        // {
-        //     name: 'discount',
-        //     title: 'Discount',
-        //     type: 'string'
-        // },
         {
             name: 'details',
             title: 'Details',

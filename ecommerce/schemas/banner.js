@@ -6,19 +6,22 @@ export default {
         {
             name: 'image',
             title: 'Image',
-            type: 'image',
+            type: 'array',
+            of: [{
+                type: 'image',
+            }],
             options: {
                 hotspot: true,
-            },
+            }
+        },
+        {
+            name: 'name',
+            title: 'Name',
+            type: 'string'
         },
         {
             name: 'buttonText',
             title: 'ButtonText',
-            type: 'string',
-        },
-        {
-            name: 'product',
-            title: 'Product',
             type: 'string',
         },
         {
@@ -56,5 +59,29 @@ export default {
             title: 'SaleTime',
             type: 'string',
         },
+        {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'name',
+                maxLength: 90
+            }
+        },
+        {
+            name: 'oldPrice',
+            title: 'Old Price',
+            type: 'number'
+        },
+        {
+            name: 'newPrice',
+            title: 'New Price',
+            type: 'number'
+        },
+        {
+            name: 'details',
+            title: 'Details',
+            type: 'string'
+        }
     ],
   };

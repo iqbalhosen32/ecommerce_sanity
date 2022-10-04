@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { urlFor } from '../lib/client';
 
-const HeroBanner = ({ heroBanner }) => {
+const HeroBanner = ({ heroBanner, heroBanner: { slug } }) => {
+  const [index, setIndex] = useState(0);
+  console.log(heroBanner.slug.current)
   return (
     <div className='hero-banner-container'>
       <div>
@@ -10,11 +12,11 @@ const HeroBanner = ({ heroBanner }) => {
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
         <picture>
-          <img src={urlFor(heroBanner.image)} alt="headphones" className='hero-banner-image' />
+          <img src={urlFor(heroBanner.image && heroBanner.image[index])} alt="headphones" className='hero-banner-image' />
 
         </picture>
         <div>
-          <Link href="/">
+          <Link href={`/product/${slug.current}`}>
             <button type='button'>{heroBanner.buttonText}</button>
           </Link>
         </div>
