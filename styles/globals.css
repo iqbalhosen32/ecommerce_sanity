@@ -760,6 +760,15 @@ span.text-red {
   margin-top: 10px;
 }
 
+@media screen and (max-width:950px) {
+  .footer-banner-image {
+    width: 45%;
+    left: 50%;
+    top: 6%;
+    height: 90%
+  }
+}
+
 @media screen and (max-width:800px) {
   .hero-banner-container {
     height: 560px;
@@ -968,7 +977,7 @@ span.text-red {
     width: 55%;
     left: 40%;
     top: 6%;
-    height: 45%
+    height: 30%
   }
 }
 

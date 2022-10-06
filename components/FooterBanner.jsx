@@ -25,7 +25,7 @@ const FooterBanner = ({ footerBanner: { slug, image, desc, discount, largeText1,
           </div>
         </div>
         <picture>
-          <img src={urlFor(image && image[index])} alt="headphones" className='hero-banner-image' />
+          <img src={urlFor(image && image[index])} alt="headphones" className='footer-banner-image' />
         </picture>
       </div>
     </div>
