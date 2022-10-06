@@ -305,6 +305,7 @@ span.text-red {
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  z-index: 10000 !important;
 }
 
 .banner-desc .left h3 {
@@ -325,6 +326,7 @@ span.text-red {
 
 .banner-desc .right {
   line-height: 1.4;
+  padding-right: 150px;
 }
 
 .banner-desc .right h3 {

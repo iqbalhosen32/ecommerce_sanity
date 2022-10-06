@@ -4,7 +4,6 @@ import { urlFor } from '../lib/client';
 
 const HeroBanner = ({ heroBanner, heroBanner: { slug } }) => {
   const [index, setIndex] = useState(0);
-  console.log(heroBanner.slug.current)
   return (
     <div className='hero-banner-container'>
       <div>
