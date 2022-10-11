@@ -17,7 +17,7 @@ const ProductDetais = ({ product, products, bannerProduct }) => {
         if (product) {
             onAdd(product, qty)
         } else if (bannerProduct) {
-            onAdd(bannerProduct[0], qty)
+            onAdd(bannerProduct, qty)
         }
         setShowCart(true)
     }
