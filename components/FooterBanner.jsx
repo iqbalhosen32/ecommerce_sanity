@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { urlFor } from '../lib/client'
 
 const FooterBanner = ({ footerBanner: { slug, image, desc, discount, largeText1, largeText2, saleTime, smallText, midText, buttonText, product, } }) => {
-  console.log(slug)
   const [index, setIndex] = useState(0);
   return (
     <div className='footer-banner-container'>

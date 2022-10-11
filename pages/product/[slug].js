@@ -14,8 +14,11 @@ const ProductDetais = ({ product, products, bannerProduct }) => {
     const { incQty, decQty, qty, onAdd, setShowCart } = UseStateContext();
 
     const handleBuyNow = () => {
-        onAdd(product, qty)
-
+        if (product) {
+            onAdd(product, qty)
+        } else if (bannerProduct) {
+            onAdd(bannerProduct[0], qty)
+        }
         setShowCart(true)
     }
 

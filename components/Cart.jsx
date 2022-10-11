@@ -12,7 +12,6 @@ import getStripe from '../lib/getStripe';
 const Cart = () => {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = UseStateContext();
-console.log(cartItems)
   const handleCheckOut = async () => {
     const stripe = await getStripe();
 
